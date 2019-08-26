@@ -1,0 +1,76 @@
+
+import random
+
+greetings = ['hello', 'hi', 'Hi', 'hey!','hey','hai']
+
+
+question1 = ['railway bot','Indian Railways bot','rail bot','train bot','railbot','trainbot']
+responses1 = ['Yes,What can I do for  you','Yes,how can I help you' ]
+
+question2 = ['what are the trains from trichy to chennai','what are the trains available from trichy to chennai','what are the trains from chennai to trichy','what are the trains available from chennai to trichy','list the trains from trichy to chennai','list the trains from chennai to trichy']
+responses2 = [' Pallavan express:12606\n Vaigai express:12635\n Rockfort express:16178\n Pearlcity express:12694\n Pandain express:12638']
+
+question3= ['PNR 12606','PNR 12635','PNR 16178','PNR 12638','Pallavan express','Vaigai express','Rockfort express','Pandain express','pallavan','vaigai','pandain','rockfort','pearlcity','12606','12638','12694','16178','12635']
+responses3= [' Which class do you wish to travel?\n AC first class\n AC 2-Tier\n AC 3-Tier\n first class(non_AC)\n sleeper(non_AC)\n second sitting(non_AC)']
+
+question4= ['AC first class', 'AC 2-Tier',' AC 3-Tier',' first class(non_AC)',' sleeper(non_AC)','second sitting(non_AC)','AC first','AC 2','AC 3','SL','1A','2A','3A','FC','2S','sl','fc','1ac','2ac','3ac','ss']
+responses4= ['How many seats?']
+
+question5= ['1','2','3','4','5','6','7','8','9','10']
+responses5= ['Reserved','Waiting_list']
+
+question6= ['thank you','Thank you','BYE','bye']
+responses6= ['bye!','Thank you!']
+
+
+def reply(Ing):
+    if(Ing=='g'):
+        random_greeting=random.choice(greetings)
+        return random_greeting
+    elif(Ing=='g1'):
+        random_greeting=random.choice(responses1)
+        return random_greeting
+    elif (Ing == 'g2'):
+        random_greeting = random.choice(responses2)
+        return random_greeting
+    elif (Ing == 'g3'):
+        random_greeting = random.choice(responses3)
+        return random_greeting
+    elif (Ing == 'g4'):
+        random_greeting = random.choice(responses4)
+        return random_greeting
+    elif (Ing == 'g5'):
+        random_greeting = random.choice(responses5)
+        return random_greeting
+    elif (Ing == 'g6'):
+        random_greeting = random.choice(responses6)
+        return random_greeting    
+
+
+while(True):
+    userInput=input("")
+    if(userInput in greetings):
+        inp='g'
+        print(reply(inp))
+    elif(userInput in question1):
+        inp = 'g1'
+        print(reply(inp))
+    elif(userInput in question2):
+        inp = 'g2'
+        print(reply(inp))
+    elif (userInput in question3):
+        inp = 'g3'
+        print(reply(inp))
+    elif (userInput in question4):
+        inp = 'g4'
+        print(reply(inp))
+    elif (userInput in question5):
+        inp = 'g5'
+        print(reply(inp))
+    
+    elif (userInput in question6):
+        inp = 'g6'
+        print(reply(inp))
+        break
+    else:
+        print("I did not understand what you said")
